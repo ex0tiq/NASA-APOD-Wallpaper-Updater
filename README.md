@@ -4,7 +4,8 @@ On every login this script fetches the latest NASA Astronomy Picture of the Day,
 
 ## Configuration
 At the top of the script you can customize two variables.    
-* `$downloadPath`: The path where the downloaded images will be stored. Defaults to "APOD" subfolder of the current users "Pictures" library.
+* `$downloadPath`: The path where the downloaded images will be stored. Defaults to "APOD" subfolder of the current users "Pictures" library.   
+**This folder must to be manually created!**
 * `$taskName`: Name of the task that will be created. Only change this when no task has been created yet. Otherwise the script won't find the old task.
 
 ## How to setup
