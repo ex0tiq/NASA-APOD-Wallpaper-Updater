@@ -92,7 +92,7 @@ function Set-BGImage($imagePath) {
 
 # Create new scheduled task to update bg image on every login
 function New-SchedTask {
-  if ([Sytem.String]::IsNullOrEmpty($taskName)) {
+  if ([System.String]::IsNullOrEmpty($taskName)) {
     Write-Host -ForegroundColor Red "Taskname cannot be empty!"
     return $false
   }
