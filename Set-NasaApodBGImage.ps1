@@ -45,10 +45,9 @@ function Update() {
 
 # Download current APOD image
 function Get-CurrentApodImage() {
-  # Check if dl path is valid
+  # create download dir if it doesn't exist
   if (-not (Test-Path -LiteralPath $downloadPath)) {
-    Write-Host -ForegroundColor Red "Download path is invalid!"
-    return $false;
+    New-Item -ItemType Directory -Path $downloadPath
   }
 
   # Get current APOD page
