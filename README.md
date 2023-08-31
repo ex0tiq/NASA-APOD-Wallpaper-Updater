@@ -17,5 +17,5 @@ The script will automatically ask for elevated privileges if needed. Confirm any
     * If the update task is present, the script will ask you if you want to delete it. Confirm this by entering 'y'.
 
 ## Use without scheduled task
-If you don't want to run this script as a scheduled task, you can append the parameter "-Update" to the script call.   
+If you don't want to run this script as a scheduled task, you can append the parameter `-Update` to the script call.   
 The script will then only run once and update the current background image.
