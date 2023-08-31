@@ -1,4 +1,4 @@
-# NASA APOD Background Updater
+# NASA APOD Wallpaper Updater
 This PowerShell script automates the configuration of a Windows scheduled task that runs on every user login.
 On every login this script fetches the latest NASA Astronomy Picture of the Day, downloads it and sets it as the Windows background image.
 
