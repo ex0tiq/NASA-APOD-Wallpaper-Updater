@@ -92,6 +92,11 @@ function Set-BGImage($imagePath) {
 
 # Create new scheduled task to update bg image on every login
 function New-SchedTask {
+  if ([Sytem.String]::IsNullOrEmpty($taskName)) {
+    Write-Host -ForegroundColor Red "Taskname cannot be empty!"
+    return $false
+  }
+
   $taskAction = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-ExecutionPolicy Bypass -WindowStyle Hidden -NonInteractive -File $($PSCommandPath) -Update"
   $taskTrigger = New-ScheduledTaskTrigger -AtLogOn
   $taskSettings = New-ScheduledTaskSettingsSet -RunOnlyIfNetworkAvailable -ExecutionTimeLimit (New-TimeSpan -Minutes 10) 
