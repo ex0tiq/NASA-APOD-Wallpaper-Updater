@@ -65,7 +65,9 @@ function Get-CurrentApodImage() {
   # Get image url
   $src | ForEach-Object { 
       if ($_.Groups[1].Value.EndsWith(".jpg") -or $_.Groups[1].Value.EndsWith(".jpeg")) {
-          $image = [System.Uri]($base + $_.Groups[1].Value) 
+          if ([System.String]::IsNullOrEmpty($image)) {
+            $image = [System.Uri]($base + $_.Groups[1].Value)
+          } else { return }
       }
   }
 
