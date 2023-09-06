@@ -71,6 +71,11 @@ function Get-CurrentApodImage() {
       }
   }
 
+  if ($null -eq $image) {
+    # no image found, abort
+    return $null
+  }
+
   $fileName = (Get-Date -Format "yyyyMMdd") + "_" + $image.Segments[$image.Segments.Count-1]
   $fullDLPath = ($downloadPath + "\" + $fileName)
 
